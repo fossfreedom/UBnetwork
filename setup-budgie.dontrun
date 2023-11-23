@@ -2,7 +2,7 @@
 
 apt update
 
-apt install -y meld wireshark filezlla putty
+apt install -y meld wireshark filezilla putty
 
 DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true apt upgrade -y
 
