@@ -6,7 +6,7 @@ IMAGE="NETWORK-IMAGE.iso"
 RELEASE="cdimage.ubuntu.com/ubuntu-budgie/jammy/daily-live/current/"
 RELEASEIMAGE="$CODENAME-network-desktop-amd64.iso"
 SHA256SUMS="SHA256SUMS"
-MOUNT="/mnt/nm"
+MOUNT="/mnt/nm3"
 NAMESERVER="1.1.1.1"
 LOGFILE="ubnm.log"
 
@@ -123,7 +123,7 @@ mv $IMAGE $RELEASEIMAGE
 
 # Next line will take a long time to recompress unless you are using a 16 core NVME based Ryzen 7 or better machine!
 log "Compressing completed image"
-xz -v -9 --threads=0 $RELEASEIMAGE
+#xz -v -9 --threads=0 $RELEASEIMAGE
 
 # We did all this with root permissions, give the user ownership back of their own files
 chown ${SUDO_USER}:${SUDO_USER} * &>/dev/null
